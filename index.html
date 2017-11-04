@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang='en'>
-    <head>
-        <meta charset='UTF-8' />
-        <title>Earthquake Tracker</title>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
-          integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
-          crossorigin=""/>
-        <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
-          integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
-          crossorigin=""></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
-        <link rel='stylesheet' href='style.css' />
-    </head>
-    <body>
-        <div class ='header'>
-            <h1>Earthquake Tracker</h1>
-            <a class="button primary" href="#" onClick='updateQuakes()'>Refresh</a>
-        </div>
-        <div class = 'landing'>
-            <div id='map' class ='body-container'></div>
-            <div class='list'><ul class ='quake-list'></ul></div>
-        </div>
 
-        <script src='script.js'></script>
+<head>
+    <meta charset='UTF-8' />
+    <title>Earthquake Tracker</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    <link rel='stylesheet' href='style.css' />
+</head>
 
-    </body>
+<body>
+    <div class='header'>
+        <h1>Earthquake Tracker</h1>
+        <a class="button primary" href="#" onClick='updateQuakes()'>Refresh</a>
+    </div>
+    <div class='landing'>
+        <div id='map' class='body-container'></div>
+        <div class='list'>
+            <ul class='quake-list'></ul>
+        </div>
+    </div>
+
+    <script src='script.js'></script>
+
+</body>
+
 </html>

@@ -20,19 +20,18 @@ let refreshMap = () => {
 let updateQuakes = () => {
     refreshMap()
     fetch("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson")
-    .then(res => res.json())
-    .then(r => {
-        var quakeList = document.getElementsByClassName('quake-list')
-        document.getElementsByClassName("quake-list")[0].innerHTML = ""
-        console.log(r)
-        for(var i = 0; i < r.features.length; i++)
-        {
-            quakeList[0].innerHTML += ("<li>"+r.features[i].properties.title+"</li>")
-            var mark = L.marker([r.features[i].geometry.coordinates[1],r.features[i].geometry.coordinates[0]])
-            mark.bindPopup(r.features[i].properties.place)
-            mark.addTo(mymap)
-        }
-    })
+        .then(res => res.json())
+        .then(r => {
+            var quakeList = document.getElementsByClassName('quake-list')
+            document.getElementsByClassName("quake-list")[0].innerHTML = ""
+            console.log(r)
+            for (var i = 0; i < r.features.length; i++) {
+                quakeList[0].innerHTML += ("<li>" + r.features[i].properties.title + "</li>")
+                var mark = L.marker([r.features[i].geometry.coordinates[1], r.features[i].geometry.coordinates[0]])
+                mark.bindPopup(r.features[i].properties.place)
+                mark.addTo(mymap)
+            }
+        })
     console.log("Referesheda;sdlfjasdf ");
 }
 
